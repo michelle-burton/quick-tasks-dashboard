@@ -1,24 +1,27 @@
 const form = document.getElementById("task-form");
 const input = document.getElementById("task-input");
-const list = document.getElementbyId("task-list");
-const summary = document.getElementbyId("summary");
+const list = document.getElementById("task-list");
+const summary = document.getElementById("summary");
 
 let tasks = [];
 
-// ADD A TASK
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log('hey');
+    const taskText = input.value.trim(); 
+    
+    if (taskText === '') return;
 
-// Form Submission 
-// event listner, 
-// prevent default form behavior )page reload)
+    const task = {
+        id: Date.now(),
+        text: taskText,
+        completed: false
+    }
 
-// get the input text, .trim()
+    tasks.push(task);
 
-// validate input 
+    input.value = '';
 
-//create a new task obj: id, text, status(completed
+    renderTasks();
+})
 
-// add task to our array of tasks - push the obje
-
-// clear the input field - reset ''
-
-// re-render the task-list - call renderTasks() to update ui
