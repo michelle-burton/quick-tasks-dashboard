@@ -52,3 +52,50 @@ li.completed {
     text-decoration: line-through;
     color: gray;
 }
+
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual task items */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Task text */
+.task-item span {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Checkbox */
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Delete button */
+.task-item button {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 12px;
+    transition: color 0.2s ease;
+}
+
+.task-item button:hover {
+    color: crimson;
+}
